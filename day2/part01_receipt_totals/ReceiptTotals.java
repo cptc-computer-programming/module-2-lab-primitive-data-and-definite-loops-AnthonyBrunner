@@ -8,14 +8,29 @@ public class ReceiptTotals {
     }
 
     // Scenario:
-    // A store sold items numbered 100 through 105.
-    // Each item costs $5.
+    
+    
     // Every 3rd item starting at 100 is on sale for $3 instead.
     //
     // TODO:
     // - Calculate and print the total cost.
     // - Do NOT hard-code the total.
     public static void printReceiptSummary() {
+        int totalcost = 0;
+
+        // A store sold items numbered 100 through 105.
+        for (int item = 100; item <= 105; item ++) {
+
+            if ((item - 100) % 3 == 0){
+                totalcost += 3;
+            } else {
+                // take a running total
+                // Each item costs $5.
+                totalcost += 5;  
+            }
+        }
+
+        System.out.println("Total Cost: $" + totalcost);
 
     }
 
